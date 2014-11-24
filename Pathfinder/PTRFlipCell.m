@@ -6,7 +6,7 @@
 //
 //
 
-#import "JCSFlipCell.h"
+#import "PTRFlipCell.h"
 
 @interface JCSFlipCell()
 

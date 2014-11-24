@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Pathfinder.xcodeproj">
+      location = "self:PathTracker.xcodeproj">
    </FileRef>
 </Workspace>

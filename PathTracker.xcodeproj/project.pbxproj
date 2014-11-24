@@ -12,18 +12,22 @@
 		3F7C03A41A159338008852F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7C03A31A159338008852F3 /* UIKit.framework */; };
 		3F7C03AA1A159338008852F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C03A81A159338008852F3 /* InfoPlist.strings */; };
 		3F7C03AC1A159338008852F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C03AB1A159338008852F3 /* main.m */; };
-		3F7C03B01A159338008852F3 /* JCSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C03AF1A159338008852F3 /* JCSAppDelegate.m */; };
+		3F7C03B01A159338008852F3 /* PTRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C03AF1A159338008852F3 /* PTRAppDelegate.m */; };
 		3F7C03B21A159338008852F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C03B11A159338008852F3 /* Images.xcassets */; };
 		3F7C03B91A159338008852F3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7C03B81A159338008852F3 /* XCTest.framework */; };
 		3F7C03BA1A159338008852F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7C039F1A159338008852F3 /* Foundation.framework */; };
 		3F7C03BB1A159338008852F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7C03A31A159338008852F3 /* UIKit.framework */; };
 		3F7C03C31A159338008852F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C03C11A159338008852F3 /* InfoPlist.strings */; };
 		3F7C03C51A159338008852F3 /* PathfinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C03C41A159338008852F3 /* PathfinderTests.m */; };
-		3F7C03D81A169D80008852F3 /* JCSFlipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C03D61A169D80008852F3 /* JCSFlipCell.m */; };
+		3F7C03D81A169D80008852F3 /* PTRFlipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C03D61A169D80008852F3 /* PTRFlipCell.m */; };
 		3F7C03DC1A169FC7008852F3 /* 1396911348_icon-ios7-information-outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C03DB1A169FC7008852F3 /* 1396911348_icon-ios7-information-outline.png */; };
 		3F7C03DE1A16A44C008852F3 /* circle_arrow-back_previous-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C03DD1A16A44C008852F3 /* circle_arrow-back_previous-128.png */; };
 		3F7C03E01A16B4AE008852F3 /* StatsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C03DF1A16B4AE008852F3 /* StatsView.storyboard */; };
-		3F7C03E21A16BB72008852F3 /* JCSFlipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C03E11A16BB72008852F3 /* JCSFlipCell.xib */; };
+		3F7C03E21A16BB72008852F3 /* PTRFlipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C03E11A16BB72008852F3 /* PTRFlipCell.xib */; };
+		3FB2B29C1A23CCD700E15042 /* PTRCharacterStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2B29B1A23CCD700E15042 /* PTRCharacterStore.m */; };
+		3FB2B29F1A23CED600E15042 /* PTRCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2B29E1A23CED600E15042 /* PTRCharacter.m */; };
+		3FB2B2A21A23CFEE00E15042 /* PTRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2B2A11A23CFEE00E15042 /* PTRItem.m */; };
+		3FB2B2A51A23D02C00E15042 /* PTRWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2B2A41A23D02C00E15042 /* PTRWeapon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,28 +41,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3F7C039C1A159338008852F3 /* Pathfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pathfinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F7C039C1A159338008852F3 /* PathTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7C039F1A159338008852F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F7C03A11A159338008852F3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3F7C03A31A159338008852F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		3F7C03A71A159338008852F3 /* Pathfinder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pathfinder-Info.plist"; sourceTree = "<group>"; };
+		3F7C03A71A159338008852F3 /* PathTracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PathTracker-Info.plist"; sourceTree = "<group>"; };
 		3F7C03A91A159338008852F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3F7C03AB1A159338008852F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3F7C03AD1A159338008852F3 /* Pathfinder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pathfinder-Prefix.pch"; sourceTree = "<group>"; };
-		3F7C03AE1A159338008852F3 /* JCSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSAppDelegate.h; sourceTree = "<group>"; };
-		3F7C03AF1A159338008852F3 /* JCSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCSAppDelegate.m; sourceTree = "<group>"; };
+		3F7C03AD1A159338008852F3 /* PathTracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PathTracker-Prefix.pch"; sourceTree = "<group>"; };
+		3F7C03AE1A159338008852F3 /* PTRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTRAppDelegate.h; sourceTree = "<group>"; };
+		3F7C03AF1A159338008852F3 /* PTRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTRAppDelegate.m; sourceTree = "<group>"; };
 		3F7C03B11A159338008852F3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3F7C03B71A159338008852F3 /* PathfinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathfinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F7C03B71A159338008852F3 /* PathTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7C03B81A159338008852F3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3F7C03C01A159338008852F3 /* PathfinderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PathfinderTests-Info.plist"; sourceTree = "<group>"; };
+		3F7C03C01A159338008852F3 /* PathTrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PathTrackerTests-Info.plist"; sourceTree = "<group>"; };
 		3F7C03C21A159338008852F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3F7C03C41A159338008852F3 /* PathfinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PathfinderTests.m; sourceTree = "<group>"; };
-		3F7C03D51A169D80008852F3 /* JCSFlipCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSFlipCell.h; sourceTree = "<group>"; };
-		3F7C03D61A169D80008852F3 /* JCSFlipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSFlipCell.m; sourceTree = "<group>"; };
+		3F7C03D51A169D80008852F3 /* PTRFlipCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRFlipCell.h; sourceTree = "<group>"; };
+		3F7C03D61A169D80008852F3 /* PTRFlipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRFlipCell.m; sourceTree = "<group>"; };
 		3F7C03DB1A169FC7008852F3 /* 1396911348_icon-ios7-information-outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1396911348_icon-ios7-information-outline.png"; sourceTree = "<group>"; };
 		3F7C03DD1A16A44C008852F3 /* circle_arrow-back_previous-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_arrow-back_previous-128.png"; sourceTree = "<group>"; };
 		3F7C03DF1A16B4AE008852F3 /* StatsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StatsView.storyboard; sourceTree = "<group>"; };
-		3F7C03E11A16BB72008852F3 /* JCSFlipCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCSFlipCell.xib; sourceTree = "<group>"; };
+		3F7C03E11A16BB72008852F3 /* PTRFlipCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTRFlipCell.xib; sourceTree = "<group>"; };
+		3FB2B29A1A23CCD700E15042 /* PTRCharacterStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRCharacterStore.h; sourceTree = "<group>"; };
+		3FB2B29B1A23CCD700E15042 /* PTRCharacterStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRCharacterStore.m; sourceTree = "<group>"; };
+		3FB2B29D1A23CED600E15042 /* PTRCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRCharacter.h; sourceTree = "<group>"; };
+		3FB2B29E1A23CED600E15042 /* PTRCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRCharacter.m; sourceTree = "<group>"; };
+		3FB2B2A01A23CFEE00E15042 /* PTRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRItem.h; sourceTree = "<group>"; };
+		3FB2B2A11A23CFEE00E15042 /* PTRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRItem.m; sourceTree = "<group>"; };
+		3FB2B2A31A23D02C00E15042 /* PTRWeapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRWeapon.h; sourceTree = "<group>"; };
+		3FB2B2A41A23D02C00E15042 /* PTRWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRWeapon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +100,7 @@
 		3F7C03931A159338008852F3 = {
 			isa = PBXGroup;
 			children = (
-				3F7C03A51A159338008852F3 /* Pathfinder */,
+				3F7C03A51A159338008852F3 /* PathTracker */,
 				3F7C03BE1A159338008852F3 /* PathfinderTests */,
 				3F7C039E1A159338008852F3 /* Frameworks */,
 				3F7C039D1A159338008852F3 /* Products */,
@@ -98,8 +110,8 @@
 		3F7C039D1A159338008852F3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F7C039C1A159338008852F3 /* Pathfinder.app */,
-				3F7C03B71A159338008852F3 /* PathfinderTests.xctest */,
+				3F7C039C1A159338008852F3 /* PathTracker.app */,
+				3F7C03B71A159338008852F3 /* PathTrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,29 +127,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3F7C03A51A159338008852F3 /* Pathfinder */ = {
+		3F7C03A51A159338008852F3 /* PathTracker */ = {
 			isa = PBXGroup;
 			children = (
-				3F7C03AE1A159338008852F3 /* JCSAppDelegate.h */,
-				3F7C03AF1A159338008852F3 /* JCSAppDelegate.m */,
-				3F7C03D51A169D80008852F3 /* JCSFlipCell.h */,
-				3F7C03D61A169D80008852F3 /* JCSFlipCell.m */,
+				3FB2B29A1A23CCD700E15042 /* PTRCharacterStore.h */,
+				3FB2B29B1A23CCD700E15042 /* PTRCharacterStore.m */,
+				3F7C03AE1A159338008852F3 /* PTRAppDelegate.h */,
+				3F7C03AF1A159338008852F3 /* PTRAppDelegate.m */,
+				3F7C03D51A169D80008852F3 /* PTRFlipCell.h */,
+				3F7C03D61A169D80008852F3 /* PTRFlipCell.m */,
+				3FB2B29D1A23CED600E15042 /* PTRCharacter.h */,
+				3FB2B29E1A23CED600E15042 /* PTRCharacter.m */,
+				3FB2B2A01A23CFEE00E15042 /* PTRItem.h */,
+				3FB2B2A11A23CFEE00E15042 /* PTRItem.m */,
+				3FB2B2A31A23D02C00E15042 /* PTRWeapon.h */,
+				3FB2B2A41A23D02C00E15042 /* PTRWeapon.m */,
 				3F7C03DF1A16B4AE008852F3 /* StatsView.storyboard */,
-				3F7C03E11A16BB72008852F3 /* JCSFlipCell.xib */,
+				3F7C03E11A16BB72008852F3 /* PTRFlipCell.xib */,
 				3F7C03B11A159338008852F3 /* Images.xcassets */,
 				3F7C03A61A159338008852F3 /* Supporting Files */,
 				3F7C03DA1A169FAE008852F3 /* Images */,
 			);
+			name = PathTracker;
 			path = Pathfinder;
 			sourceTree = "<group>";
 		};
 		3F7C03A61A159338008852F3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3F7C03A71A159338008852F3 /* Pathfinder-Info.plist */,
+				3F7C03A71A159338008852F3 /* PathTracker-Info.plist */,
 				3F7C03A81A159338008852F3 /* InfoPlist.strings */,
 				3F7C03AB1A159338008852F3 /* main.m */,
-				3F7C03AD1A159338008852F3 /* Pathfinder-Prefix.pch */,
+				3F7C03AD1A159338008852F3 /* PathTracker-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -154,7 +175,7 @@
 		3F7C03BF1A159338008852F3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3F7C03C01A159338008852F3 /* PathfinderTests-Info.plist */,
+				3F7C03C01A159338008852F3 /* PathTrackerTests-Info.plist */,
 				3F7C03C11A159338008852F3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -172,9 +193,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F7C039B1A159338008852F3 /* Pathfinder */ = {
+		3F7C039B1A159338008852F3 /* PathTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F7C03C81A159338008852F3 /* Build configuration list for PBXNativeTarget "Pathfinder" */;
+			buildConfigurationList = 3F7C03C81A159338008852F3 /* Build configuration list for PBXNativeTarget "PathTracker" */;
 			buildPhases = (
 				3F7C03981A159338008852F3 /* Sources */,
 				3F7C03991A159338008852F3 /* Frameworks */,
@@ -184,14 +205,14 @@
 			);
 			dependencies = (
 			);
-			name = Pathfinder;
+			name = PathTracker;
 			productName = Pathfinder;
-			productReference = 3F7C039C1A159338008852F3 /* Pathfinder.app */;
+			productReference = 3F7C039C1A159338008852F3 /* PathTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3F7C03B61A159338008852F3 /* PathfinderTests */ = {
+		3F7C03B61A159338008852F3 /* PathTrackerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F7C03CB1A159338008852F3 /* Build configuration list for PBXNativeTarget "PathfinderTests" */;
+			buildConfigurationList = 3F7C03CB1A159338008852F3 /* Build configuration list for PBXNativeTarget "PathTrackerTests" */;
 			buildPhases = (
 				3F7C03B31A159338008852F3 /* Sources */,
 				3F7C03B41A159338008852F3 /* Frameworks */,
@@ -202,9 +223,9 @@
 			dependencies = (
 				3F7C03BD1A159338008852F3 /* PBXTargetDependency */,
 			);
-			name = PathfinderTests;
+			name = PathTrackerTests;
 			productName = PathfinderTests;
-			productReference = 3F7C03B71A159338008852F3 /* PathfinderTests.xctest */;
+			productReference = 3F7C03B71A159338008852F3 /* PathTrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +234,7 @@
 		3F7C03941A159338008852F3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = JCS;
+				CLASSPREFIX = PTR;
 				LastUpgradeCheck = 0510;
 				TargetAttributes = {
 					3F7C03B61A159338008852F3 = {
@@ -221,7 +242,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3F7C03971A159338008852F3 /* Build configuration list for PBXProject "Pathfinder" */;
+			buildConfigurationList = 3F7C03971A159338008852F3 /* Build configuration list for PBXProject "PathTracker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -233,8 +254,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F7C039B1A159338008852F3 /* Pathfinder */,
-				3F7C03B61A159338008852F3 /* PathfinderTests */,
+				3F7C039B1A159338008852F3 /* PathTracker */,
+				3F7C03B61A159338008852F3 /* PathTrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -249,7 +270,7 @@
 				3F7C03E01A16B4AE008852F3 /* StatsView.storyboard in Resources */,
 				3F7C03DE1A16A44C008852F3 /* circle_arrow-back_previous-128.png in Resources */,
 				3F7C03DC1A169FC7008852F3 /* 1396911348_icon-ios7-information-outline.png in Resources */,
-				3F7C03E21A16BB72008852F3 /* JCSFlipCell.xib in Resources */,
+				3F7C03E21A16BB72008852F3 /* PTRFlipCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,9 +289,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB2B29F1A23CED600E15042 /* PTRCharacter.m in Sources */,
+				3FB2B2A21A23CFEE00E15042 /* PTRItem.m in Sources */,
 				3F7C03AC1A159338008852F3 /* main.m in Sources */,
-				3F7C03B01A159338008852F3 /* JCSAppDelegate.m in Sources */,
-				3F7C03D81A169D80008852F3 /* JCSFlipCell.m in Sources */,
+				3F7C03B01A159338008852F3 /* PTRAppDelegate.m in Sources */,
+				3F7C03D81A169D80008852F3 /* PTRFlipCell.m in Sources */,
+				3FB2B29C1A23CCD700E15042 /* PTRCharacterStore.m in Sources */,
+				3FB2B2A51A23D02C00E15042 /* PTRWeapon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +312,7 @@
 /* Begin PBXTargetDependency section */
 		3F7C03BD1A159338008852F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3F7C039B1A159338008852F3 /* Pathfinder */;
+			target = 3F7C039B1A159338008852F3 /* PathTracker */;
 			targetProxy = 3F7C03BC1A159338008852F3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -388,9 +413,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pathfinder/Pathfinder-Prefix.pch";
-				INFOPLIST_FILE = "Pathfinder/Pathfinder-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Pathfinder/PathTracker-Prefix.pch";
+				INFOPLIST_FILE = "Pathfinder/PathTracker-Info.plist";
+				PRODUCT_NAME = PathTracker;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -401,9 +426,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pathfinder/Pathfinder-Prefix.pch";
-				INFOPLIST_FILE = "Pathfinder/Pathfinder-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Pathfinder/PathTracker-Prefix.pch";
+				INFOPLIST_FILE = "Pathfinder/PathTracker-Info.plist";
+				PRODUCT_NAME = PathTracker;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -423,8 +448,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "PathfinderTests/PathfinderTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "PathfinderTests/PathTrackerTests-Info.plist";
+				PRODUCT_NAME = PathTrackerTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -441,8 +466,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pathfinder/Pathfinder-Prefix.pch";
-				INFOPLIST_FILE = "PathfinderTests/PathfinderTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "PathfinderTests/PathTrackerTests-Info.plist";
+				PRODUCT_NAME = PathTrackerTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -451,7 +476,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3F7C03971A159338008852F3 /* Build configuration list for PBXProject "Pathfinder" */ = {
+		3F7C03971A159338008852F3 /* Build configuration list for PBXProject "PathTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F7C03C61A159338008852F3 /* Debug */,
@@ -460,7 +485,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F7C03C81A159338008852F3 /* Build configuration list for PBXNativeTarget "Pathfinder" */ = {
+		3F7C03C81A159338008852F3 /* Build configuration list for PBXNativeTarget "PathTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F7C03C91A159338008852F3 /* Debug */,
@@ -469,7 +494,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F7C03CB1A159338008852F3 /* Build configuration list for PBXNativeTarget "PathfinderTests" */ = {
+		3F7C03CB1A159338008852F3 /* Build configuration list for PBXNativeTarget "PathTrackerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F7C03CC1A159338008852F3 /* Debug */,
