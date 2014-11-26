@@ -10,7 +10,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JCSAppDelegate : UIResponder <UIApplicationDelegate>
+@interface PTRAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

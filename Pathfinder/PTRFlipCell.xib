@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JCSFlipCell">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PTRFlipCell">
             <connections>
                 <outlet property="backView" destination="zvS-7D-ioK" id="BVe-SO-Ofo"/>
-                <outlet property="cellTitle" destination="aQE-Kq-Tnf" id="hv9-6H-aoM"/>
-                <outlet property="cellValue" destination="K85-eX-mA4" id="8mw-1j-M0x"/>
+                <outlet property="cellTitle" destination="aQE-Kq-Tnf" id="B1d-0a-IXb"/>
+                <outlet property="cellValue" destination="K85-eX-mA4" id="bGo-in-MqU"/>
                 <outlet property="frontView" destination="ec4-Wa-AOb" id="eHN-A9-9HV"/>
+                <outlet property="val1Label" destination="lUk-cB-a2i" id="Bah-3t-J7P"/>
+                <outlet property="val1TextField" destination="9Sr-uL-V1g" id="f35-4d-wbG"/>
+                <outlet property="val2Label" destination="TNn-1e-mrl" id="iIP-FF-p5d"/>
+                <outlet property="val2TextField" destination="4r8-8T-3ZE" id="wBy-yC-o4b"/>
+                <outlet property="val3Label" destination="6x2-PJ-Z3Z" id="vvo-51-2hK"/>
+                <outlet property="val3TextField" destination="uQB-TG-HTH" id="9mj-p5-Ywy"/>
+                <outlet property="val4Label" destination="nOV-is-i2F" id="YeR-ih-6HK"/>
+                <outlet property="val4TextField" destination="Ljt-6v-Tzs" id="hkR-7M-mdy"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

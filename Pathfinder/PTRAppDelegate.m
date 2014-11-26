@@ -8,7 +8,7 @@
 
 #import "PTRAppDelegate.h"
 
-@implementation JCSAppDelegate
+@implementation PTRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

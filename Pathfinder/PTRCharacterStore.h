@@ -12,11 +12,12 @@
 
 @interface PTRCharacterStore : NSObject
 
-@property (nonatomic, readonly) NSArray *allItems;
+@property (nonatomic, readonly, copy) NSArray *allItems;
 
 + (instancetype)sharedStore;
 - (PTRCharacter *)createItem;
 - (void)removeItem:(PTRCharacter *)item;
 - (void)moveItemAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
+-(BOOL)saveChanges;
 
 @end

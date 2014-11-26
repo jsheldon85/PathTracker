@@ -8,9 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JCSFlipCell : UITableViewCell
+@interface PTRFlipCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *cellTitle;
 @property (weak, nonatomic) IBOutlet UILabel *cellValue;
+@property (weak, nonatomic) IBOutlet UILabel *val1Label;
+@property (weak, nonatomic) IBOutlet UITextField *val1TextField;
+@property (weak, nonatomic) IBOutlet UILabel *val2Label;
+@property (weak, nonatomic) IBOutlet UITextField *val2TextField;
+@property (weak, nonatomic) IBOutlet UILabel *val3Label;
+@property (weak, nonatomic) IBOutlet UITextField *val3TextField;
+@property (weak, nonatomic) IBOutlet UILabel *val4Label;
+@property (weak, nonatomic) IBOutlet UITextField *val4TextField;
 
 @end

@@ -8,14 +8,14 @@
 
 #import "PTRFlipCell.h"
 
-@interface JCSFlipCell()
+@interface PTRFlipCell()
 
 @property (strong, nonatomic) IBOutlet UIView *frontView;
 @property (strong, nonatomic) IBOutlet UIView *backView;
 
 @end
 
-@implementation JCSFlipCell
+@implementation PTRFlipCell
 
 - (IBAction)flipToBack:(id)sender
 {
@@ -42,7 +42,7 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
-    NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"JCSFlipCell" owner:self options:nil];
+    NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"PTRFlipCell" owner:self options:nil];
     [self.contentView addSubview:nibViews[0]];
     [self.contentView addSubview:nibViews[1]];
     return self;

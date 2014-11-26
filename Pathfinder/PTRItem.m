@@ -10,11 +10,21 @@
 
 @implementation PTRItem
 
--(instancetype)initWithDetails
+-(instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super init];
-    
+    if (self)
+    {
+        _title = [aDecoder decodeObjectForKey:@"title"];
+        _description = [aDecoder decodeObjectForKey:@"description"];
+    }
     return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.title forKey:@"title"];
+    [aCoder encodeObject:self.description forKey:@"description"];
 }
 
 @end

@@ -8,11 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PTRItem : NSObject
+@interface PTRItem : NSObject <NSCoding>
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *description;
-
--(instancetype)initWithDetails;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "PTRCharacterStore.h"
+#import "PTRCharacter.h"
 
 @interface PTRCharacterStore ()
 
@@ -33,12 +34,26 @@
     return nil;
 }
 
-- (instancetype)initPrivate {
+- (instancetype)initPrivate
+{
     self = [super init];
-    if (self) {
-        _privateItems = [[NSMutableArray alloc] init];
+    if (self)
+    {
+        NSString *path = [self itemArchivePath];
+        _privateItems = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        if (!_privateItems)
+        {
+            _privateItems = [[NSMutableArray alloc] init];
+        }
     }
     return self;
+}
+
+- (NSString *)itemArchivePath
+{
+    NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [documentDirectories firstObject];
+    return [documentDirectory stringByAppendingPathComponent:@"items.archive"];
 }
 
 - (NSArray *)allItems {
@@ -46,20 +61,26 @@
 }
 
 - (PTRCharacter *)createItem {
-    PTRCharacter *item = [PTRCharacter emptyItem];
+    PTRCharacter *item = [[PTRCharacter alloc] init];
     [self.privateItems addObject:item];
     return item;
 }
 
-- (void)removeItem:(BNRItem *)item {
+- (void)removeItem:(PTRCharacter *)item {
     [self.privateItems removeObjectIdenticalTo:item];
 }
 
 - (void)moveItemAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex {
     if (fromIndex == toIndex) return;
-    BNRItem *item = self.privateItems[fromIndex];
+    PTRCharacter *item = self.privateItems[fromIndex];
     [self.privateItems removeObjectAtIndex:fromIndex];
     [self.privateItems insertObject:item atIndex:toIndex];
+}
+
+-(BOOL)saveChanges
+{
+    NSString *path = [self itemArchivePath];
+    return [NSKeyedArchiver archiveRootObject:self.privateItems toFile:path];
 }
 
 @end
