@@ -45,8 +45,8 @@
     return self.privateItems;
 }
 
-- (BNRItem *)createItem {
-    BNRItem *item = [BNRItem randomItem];
+- (PTRCharacter *)createItem {
+    PTRCharacter *item = [PTRCharacter emptyItem];
     [self.privateItems addObject:item];
     return item;
 }

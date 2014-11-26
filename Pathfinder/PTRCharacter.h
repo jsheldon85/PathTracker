@@ -10,4 +10,6 @@
 
 @interface PTRCharacter : NSObject
 
++(PTRCharacter *)emptyCharacter;
+
 @end

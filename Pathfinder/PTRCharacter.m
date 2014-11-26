@@ -10,4 +10,9 @@
 
 @implementation PTRCharacter
 
++(PTRCharacter *)emptyCharacter
+{
+    return [self init];
+}
+
 @end

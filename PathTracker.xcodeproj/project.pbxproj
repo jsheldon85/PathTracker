@@ -28,6 +28,7 @@
 		3FB2B29F1A23CED600E15042 /* PTRCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2B29E1A23CED600E15042 /* PTRCharacter.m */; };
 		3FB2B2A21A23CFEE00E15042 /* PTRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2B2A11A23CFEE00E15042 /* PTRItem.m */; };
 		3FB2B2A51A23D02C00E15042 /* PTRWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2B2A41A23D02C00E15042 /* PTRWeapon.m */; };
+		3FB2B2A71A258B1300E15042 /* CharacterInfoList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FB2B2A61A258B1300E15042 /* CharacterInfoList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		3FB2B2A11A23CFEE00E15042 /* PTRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRItem.m; sourceTree = "<group>"; };
 		3FB2B2A31A23D02C00E15042 /* PTRWeapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRWeapon.h; sourceTree = "<group>"; };
 		3FB2B2A41A23D02C00E15042 /* PTRWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRWeapon.m; sourceTree = "<group>"; };
+		3FB2B2A61A258B1300E15042 /* CharacterInfoList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CharacterInfoList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		3F7C03931A159338008852F3 = {
 			isa = PBXGroup;
 			children = (
+				3FB2B2A61A258B1300E15042 /* CharacterInfoList.plist */,
 				3F7C03A51A159338008852F3 /* PathTracker */,
 				3F7C03BE1A159338008852F3 /* PathfinderTests */,
 				3F7C039E1A159338008852F3 /* Frameworks */,
@@ -270,6 +273,7 @@
 				3F7C03E01A16B4AE008852F3 /* StatsView.storyboard in Resources */,
 				3F7C03DE1A16A44C008852F3 /* circle_arrow-back_previous-128.png in Resources */,
 				3F7C03DC1A169FC7008852F3 /* 1396911348_icon-ios7-information-outline.png in Resources */,
+				3FB2B2A71A258B1300E15042 /* CharacterInfoList.plist in Resources */,
 				3F7C03E21A16BB72008852F3 /* PTRFlipCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
