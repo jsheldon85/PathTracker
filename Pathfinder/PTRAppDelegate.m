@@ -7,6 +7,7 @@
 //
 
 #import "PTRAppDelegate.h"
+#import "PTRStatsTableViewController.h"
 
 @implementation PTRAppDelegate
 
@@ -16,8 +17,10 @@
     // Override point for customization after application launch.
     
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"StatsView" bundle:nil];
-    UIViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"StatsViewController"];
+    //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"StatsView" bundle:nil];
+    //UIViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"StatsViewController"];
+    
+    UITableViewController *svc = [[PTRStatsTableViewController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:svc];
     
     self.window.rootViewController = navController;

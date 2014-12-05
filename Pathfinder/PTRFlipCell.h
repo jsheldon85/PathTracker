@@ -21,4 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *val4Label;
 @property (weak, nonatomic) IBOutlet UITextField *val4TextField;
 
+-(instancetype)initWithTitle:(NSString *)title value:(NSNumber *)value valueComponents:(NSArray *)vals;
+
+
 @end

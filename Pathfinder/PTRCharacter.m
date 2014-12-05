@@ -18,7 +18,7 @@
     
     //Initialize Abilities
     
-    for (NSDictionary __strong *dict in [NSArray arrayWithObjects:self.strength, self.dexterity, self.constitution, self.intelligence, self.wisdom, self.charisma, nil])
+    for (NSMutableDictionary __strong *dict in [NSArray arrayWithObjects:self.strength, self.dexterity, self.constitution, self.intelligence, self.wisdom, self.charisma, nil])
     {
         dict = @{ @"Ability Score" : @0,
                  @"Ability Modifier" : @0,
@@ -28,7 +28,7 @@
     
     //Initialize Saving Throws
     
-    for (NSDictionary __strong *dict in [NSArray arrayWithObjects:self.fortitude, self.reflex, self.will,nil])
+    for (NSMutableDictionary __strong *dict in [NSArray arrayWithObjects:self.fortitude, self.reflex, self.will,nil])
     {
         dict = @{ @"Total" : @0,
                   @"Base Save" : @0,

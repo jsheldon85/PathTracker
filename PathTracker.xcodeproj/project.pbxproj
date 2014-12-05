@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F612BEC1A2FAEF40018ECC6 /* PTRStatsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F612BEB1A2FAEF40018ECC6 /* PTRStatsTableViewController.m */; };
 		3F7C03A01A159338008852F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7C039F1A159338008852F3 /* Foundation.framework */; };
 		3F7C03A21A159338008852F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7C03A11A159338008852F3 /* CoreGraphics.framework */; };
 		3F7C03A41A159338008852F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7C03A31A159338008852F3 /* UIKit.framework */; };
@@ -22,7 +23,6 @@
 		3F7C03D81A169D80008852F3 /* PTRFlipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C03D61A169D80008852F3 /* PTRFlipCell.m */; };
 		3F7C03DC1A169FC7008852F3 /* 1396911348_icon-ios7-information-outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C03DB1A169FC7008852F3 /* 1396911348_icon-ios7-information-outline.png */; };
 		3F7C03DE1A16A44C008852F3 /* circle_arrow-back_previous-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C03DD1A16A44C008852F3 /* circle_arrow-back_previous-128.png */; };
-		3F7C03E01A16B4AE008852F3 /* StatsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C03DF1A16B4AE008852F3 /* StatsView.storyboard */; };
 		3F7C03E21A16BB72008852F3 /* PTRFlipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C03E11A16BB72008852F3 /* PTRFlipCell.xib */; };
 		3FB2B29C1A23CCD700E15042 /* PTRCharacterStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2B29B1A23CCD700E15042 /* PTRCharacterStore.m */; };
 		3FB2B29F1A23CED600E15042 /* PTRCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2B29E1A23CED600E15042 /* PTRCharacter.m */; };
@@ -42,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F612BEA1A2FAEF40018ECC6 /* PTRStatsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRStatsTableViewController.h; sourceTree = "<group>"; };
+		3F612BEB1A2FAEF40018ECC6 /* PTRStatsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRStatsTableViewController.m; sourceTree = "<group>"; };
 		3F7C039C1A159338008852F3 /* PathTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7C039F1A159338008852F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F7C03A11A159338008852F3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,7 +64,6 @@
 		3F7C03D61A169D80008852F3 /* PTRFlipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRFlipCell.m; sourceTree = "<group>"; };
 		3F7C03DB1A169FC7008852F3 /* 1396911348_icon-ios7-information-outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1396911348_icon-ios7-information-outline.png"; sourceTree = "<group>"; };
 		3F7C03DD1A16A44C008852F3 /* circle_arrow-back_previous-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_arrow-back_previous-128.png"; sourceTree = "<group>"; };
-		3F7C03DF1A16B4AE008852F3 /* StatsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StatsView.storyboard; sourceTree = "<group>"; };
 		3F7C03E11A16BB72008852F3 /* PTRFlipCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTRFlipCell.xib; sourceTree = "<group>"; };
 		3FB2B29A1A23CCD700E15042 /* PTRCharacterStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRCharacterStore.h; sourceTree = "<group>"; };
 		3FB2B29B1A23CCD700E15042 /* PTRCharacterStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRCharacterStore.m; sourceTree = "<group>"; };
@@ -139,14 +140,15 @@
 				3F7C03AF1A159338008852F3 /* PTRAppDelegate.m */,
 				3F7C03D51A169D80008852F3 /* PTRFlipCell.h */,
 				3F7C03D61A169D80008852F3 /* PTRFlipCell.m */,
+				3F7C03E11A16BB72008852F3 /* PTRFlipCell.xib */,
 				3FB2B29D1A23CED600E15042 /* PTRCharacter.h */,
 				3FB2B29E1A23CED600E15042 /* PTRCharacter.m */,
 				3FB2B2A01A23CFEE00E15042 /* PTRItem.h */,
 				3FB2B2A11A23CFEE00E15042 /* PTRItem.m */,
 				3FB2B2A31A23D02C00E15042 /* PTRWeapon.h */,
 				3FB2B2A41A23D02C00E15042 /* PTRWeapon.m */,
-				3F7C03DF1A16B4AE008852F3 /* StatsView.storyboard */,
-				3F7C03E11A16BB72008852F3 /* PTRFlipCell.xib */,
+				3F612BEA1A2FAEF40018ECC6 /* PTRStatsTableViewController.h */,
+				3F612BEB1A2FAEF40018ECC6 /* PTRStatsTableViewController.m */,
 				3F7C03B11A159338008852F3 /* Images.xcassets */,
 				3F7C03A61A159338008852F3 /* Supporting Files */,
 				3F7C03DA1A169FAE008852F3 /* Images */,
@@ -271,7 +273,6 @@
 				3F7C03AA1A159338008852F3 /* InfoPlist.strings in Resources */,
 				3FD1AECE1A26351D00B06E15 /* PZO1110-CharacterSheet.pdf in Resources */,
 				3F7C03B21A159338008852F3 /* Images.xcassets in Resources */,
-				3F7C03E01A16B4AE008852F3 /* StatsView.storyboard in Resources */,
 				3F7C03DE1A16A44C008852F3 /* circle_arrow-back_previous-128.png in Resources */,
 				3F7C03DC1A169FC7008852F3 /* 1396911348_icon-ios7-information-outline.png in Resources */,
 				3F7C03E21A16BB72008852F3 /* PTRFlipCell.xib in Resources */,
@@ -297,6 +298,7 @@
 				3FB2B2A21A23CFEE00E15042 /* PTRItem.m in Sources */,
 				3F7C03AC1A159338008852F3 /* main.m in Sources */,
 				3F7C03B01A159338008852F3 /* PTRAppDelegate.m in Sources */,
+				3F612BEC1A2FAEF40018ECC6 /* PTRStatsTableViewController.m in Sources */,
 				3F7C03D81A169D80008852F3 /* PTRFlipCell.m in Sources */,
 				3FB2B29C1A23CCD700E15042 /* PTRCharacterStore.m in Sources */,
 				3FB2B2A51A23D02C00E15042 /* PTRWeapon.m in Sources */,

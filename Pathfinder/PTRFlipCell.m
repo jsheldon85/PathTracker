@@ -17,6 +17,24 @@
 
 @implementation PTRFlipCell
 
+-(instancetype)initWithTitle:(NSString *)title value:(NSNumber *)value valueComponents:(NSArray *)vals
+{
+    self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PTRFlipCell"];
+    
+    if(self)
+    {
+        NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"PTRFlipCell" owner:self options:nil];
+        [self.contentView addSubview:nibViews[0]];
+        [self.contentView addSubview:nibViews[1]];
+        
+        self.cellTitle.text = title;
+        NSLog(@"Hello");
+        self.cellValue.text = [value stringValue];
+    }
+    return self;
+}
+
+
 - (IBAction)flipToBack:(id)sender
 {
     [UIView transitionWithView:self.contentView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromBottom animations:^{[self.contentView insertSubview:self.backView aboveSubview:self.frontView];} completion:^(BOOL finished){}];
@@ -39,13 +57,5 @@
     // Configure the view for the selected state
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"PTRFlipCell" owner:self options:nil];
-    [self.contentView addSubview:nibViews[0]];
-    [self.contentView addSubview:nibViews[1]];
-    return self;
-}
 
 @end

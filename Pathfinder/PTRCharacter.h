@@ -40,24 +40,24 @@
 
 //Abilities
 
-@property (nonatomic) NSDictionary *strength;
-@property (nonatomic) NSDictionary *dexterity;
-@property (nonatomic) NSDictionary *constitution;
-@property (nonatomic) NSDictionary *intelligence;
-@property (nonatomic) NSDictionary *wisdom;
-@property (nonatomic) NSDictionary *charisma;
+@property (nonatomic) NSMutableDictionary *strength;
+@property (nonatomic) NSMutableDictionary *dexterity;
+@property (nonatomic) NSMutableDictionary *constitution;
+@property (nonatomic) NSMutableDictionary *intelligence;
+@property (nonatomic) NSMutableDictionary *wisdom;
+@property (nonatomic) NSMutableDictionary *charisma;
 
 //Saving Throws
 
-@property (nonatomic) NSDictionary *fortitude;
-@property (nonatomic) NSDictionary *reflex;
-@property (nonatomic) NSDictionary *will;
+@property (nonatomic) NSMutableDictionary *fortitude;
+@property (nonatomic) NSMutableDictionary *reflex;
+@property (nonatomic) NSMutableDictionary *will;
 
 //Combat Stats
 
-@property (nonatomic) NSDictionary *initiative;
-@property (nonatomic) NSDictionary *armorClass;
-@property (nonatomic) NSDictionary *CMB;
-@property (nonatomic) NSDictionary *CMD;
+@property (nonatomic) NSMutableDictionary *initiative;
+@property (nonatomic) NSMutableDictionary *armorClass;
+@property (nonatomic) NSMutableDictionary *CMB;
+@property (nonatomic) NSMutableDictionary *CMD;
 
 @end
