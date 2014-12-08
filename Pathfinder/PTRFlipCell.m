@@ -17,7 +17,7 @@
 
 @implementation PTRFlipCell
 
--(instancetype)initWithTitle:(NSString *)title value:(NSNumber *)value valueComponents:(NSArray *)vals
+-(instancetype)initWithTitle:(NSString *)title value:(NSNumber *)value componentDictionary:(NSDictionary *)components
 {
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PTRFlipCell"];
     
@@ -28,7 +28,6 @@
         [self.contentView addSubview:nibViews[1]];
         
         self.cellTitle.text = title;
-        NSLog(@"Hello");
         self.cellValue.text = [value stringValue];
     }
     return self;
@@ -52,9 +51,12 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
-    [super setSelected:selected animated:animated];
+    return;
+}
 
-    // Configure the view for the selected state
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
+{
+    return;
 }
 
 
