@@ -21,19 +21,12 @@
     
     for (NSMutableDictionary __strong *dict in [NSArray arrayWithObjects:self.strength, self.dexterity, self.constitution, self.intelligence, self.wisdom, self.charisma, nil])
     {
-        dict = [@{ @"Ability Score" : ^ NSNumber* (void){
-            int sum = 0;
-            for(NSString* key in self.strength)
-            {
-                sum += [self.strength[key] intValue];
-            }
-            return [NSNumber numberWithInt:sum];
-        },
+        dict = [@{ @"Ability Score" : @0,
                  @"Ability Modifier" : @0,
                  @"Temp Adjustment" : @0,
                    @"Temp Modifier" : @0 } mutableCopy];
     }
-    
+        
     //Initialize Saving Throws
     
     self.fortitude = [@{@"Total" : @0,

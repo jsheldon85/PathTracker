@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UIView *frontView;
 @property (strong, nonatomic) IBOutlet UIView *backView;
+@property (nonatomic) NSMutableDictionary *components;
 
 @end
 
@@ -29,6 +30,14 @@
         
         self.cellTitle.text = title;
         self.cellValue.text = [value stringValue];
+        
+        self.components = [components mutableCopy];
+        
+        for (NSString *key in self.components)
+        {
+            NSNumber *currentComponent = [self.components objectForKey:key];
+            
+        }
     }
     return self;
 }
@@ -48,6 +57,8 @@
 {
     // Initialization code
 }
+
+//These cells should not be selected or highlighted
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
