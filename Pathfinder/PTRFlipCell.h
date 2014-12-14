@@ -12,14 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *cellTitle;
 @property (weak, nonatomic) IBOutlet UILabel *cellValue;
-@property (weak, nonatomic) IBOutlet UILabel *val1Label;
-@property (weak, nonatomic) IBOutlet UITextField *val1TextField;
-@property (weak, nonatomic) IBOutlet UILabel *val2Label;
-@property (weak, nonatomic) IBOutlet UITextField *val2TextField;
-@property (weak, nonatomic) IBOutlet UILabel *val3Label;
-@property (weak, nonatomic) IBOutlet UITextField *val3TextField;
-@property (weak, nonatomic) IBOutlet UILabel *val4Label;
-@property (weak, nonatomic) IBOutlet UITextField *val4TextField;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 -(instancetype)initWithTitle:(NSString *)title value:(NSNumber *)value componentDictionary:(NSDictionary *)components;
 

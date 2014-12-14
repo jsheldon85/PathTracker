@@ -16,66 +16,89 @@
     
     if(self)
     {
-    
-    //Initialize Abilities
-    
-    for (NSMutableDictionary __strong *dict in [NSArray arrayWithObjects:self.strength, self.dexterity, self.constitution, self.intelligence, self.wisdom, self.charisma, nil])
-    {
-        dict = [@{ @"Ability Score" : @0,
-                 @"Ability Modifier" : @0,
-                 @"Temp Adjustment" : @0,
-                   @"Temp Modifier" : @0 } mutableCopy];
-    }
         
-    //Initialize Saving Throws
-    
-    self.fortitude = [@{@"Total" : @0,
-                        @"Base Save" : @0,
-                        @"Ability Modifier" : @0,
-                        @"Magic Modifier" : @0,
-                        @"Misc Modifier" : @0,
-                        @"Temp Modifier" : @0 } mutableCopy];
+        //Initialize Abilities
         
-    self.reflex = [@{@"Total" : @0,
-                     @"Base Save" : @0,
-                     @"Ability Modifier" : @0,
-                     @"Magic Modifier" : @0,
-                     @"Misc Modifier" : @0,
-                     @"Temp Modifier" : @0 } mutableCopy];
+
+        self.strength = [@{ @"Ability Score" : @0,
+                            @"Ability Modifier" : @0,
+                            @"Temp Adjustment" : @0,
+                            @"Temp Modifier" : @0 } mutableCopy];
+            
+        self.dexterity = [@{ @"Ability Score" : @0,
+                            @"Ability Modifier" : @0,
+                            @"Temp Adjustment" : @0,
+                            @"Temp Modifier" : @0 } mutableCopy];
+            
+        self.intelligence = [@{ @"Ability Score" : @0,
+                            @"Ability Modifier" : @0,
+                            @"Temp Adjustment" : @0,
+                            @"Temp Modifier" : @0 } mutableCopy];
+            
+        self.wisdom = [@{ @"Ability Score" : @0,
+                            @"Ability Modifier" : @0,
+                            @"Temp Adjustment" : @0,
+                            @"Temp Modifier" : @0 } mutableCopy];
+            
+        self.charisma = [@{ @"Ability Score" : @0,
+                            @"Ability Modifier" : @0,
+                            @"Temp Adjustment" : @0,
+                            @"Temp Modifier" : @0 } mutableCopy];
+            
+        self.constitution = [@{ @"Ability Score" : @0,
+                            @"Ability Modifier" : @0,
+                            @"Temp Adjustment" : @0,
+                            @"Temp Modifier" : @0 } mutableCopy];
+            
+        //Initialize Saving Throws
         
-    self.will = [@{@"Total" : @0,
-                   @"Base Save" : @0,
-                   @"Ability Modifier" : @0,
-                   @"Magic Modifier" : @0,
-                   @"Misc Modifier" : @0,
-                   @"Temp Modifier" : @0 } mutableCopy];
-    
-    //Initialize Combat Stats
-    
-    self.initiative = [@{@"Total": @0,
-                        @"Dex Modifier" : @0,
-                        @"Misc Modifier" : @0 } mutableCopy];
-    
-    self.CMB = [@{@"Total": @0,
-                 @"Base Attack Bonus" : @0,
-                 @"Strength Modifier" : @0,
-                  @"Size Modifier" : @0 } mutableCopy];
-    
-    self.CMD = [@{@"Total": @0,
-                 @"Base Attack Bonus" : @0,
-                 @"Strength Modifier" : @0,
-                 @"Dexterity Modifier" : @0,
-                 @"Size Modifier" : @0 } mutableCopy];
-    
-    
-    self.armorClass = [@{@"Total" : @0,
-                        @"Armor Bonus" : @0,
-                        @"Shield Bonus" : @0,
-                        @"Dex Modifier" : @0,
-                        @"Size Modifier" : @0,
-                        @"Natural Armor" : @0,
-                        @"Deflection Modifier" : @0,
-                        @"Misc Modifier" : @0 } mutableCopy];
+        self.fortitude = [@{@"Total" : @0,
+                            @"Base Save" : @0,
+                            @"Ability Modifier" : @0,
+                            @"Magic Modifier" : @0,
+                            @"Misc Modifier" : @0,
+                            @"Temp Modifier" : @0 } mutableCopy];
+            
+        self.reflex = [@{@"Total" : @0,
+                         @"Base Save" : @0,
+                         @"Ability Modifier" : @0,
+                         @"Magic Modifier" : @0,
+                         @"Misc Modifier" : @0,
+                         @"Temp Modifier" : @0 } mutableCopy];
+            
+        self.will = [@{@"Total" : @0,
+                       @"Base Save" : @0,
+                       @"Ability Modifier" : @0,
+                       @"Magic Modifier" : @0,
+                       @"Misc Modifier" : @0,
+                       @"Temp Modifier" : @0 } mutableCopy];
+        
+        //Initialize Combat Stats
+        
+        self.initiative = [@{@"Total": @0,
+                             @"Dex Modifier" : @0,
+                             @"Misc Modifier" : @0 } mutableCopy];
+        
+        self.CMB = [@{@"Total": @0,
+                      @"Base Attack Bonus" : @0,
+                      @"Strength Modifier" : @0,
+                      @"Size Modifier" : @0 } mutableCopy];
+        
+        self.CMD = [@{@"Total": @0,
+                      @"Base Attack Bonus" : @0,
+                      @"Strength Modifier" : @0,
+                      @"Dexterity Modifier" : @0,
+                      @"Size Modifier" : @0 } mutableCopy];
+        
+        
+        self.armorClass = [@{@"Total" : @0,
+                             @"Armor Bonus" : @0,
+                             @"Shield Bonus" : @0,
+                             @"Dex Modifier" : @0,
+                             @"Size Modifier" : @0,
+                             @"Natural Armor" : @0,
+                             @"Deflection Modifier" : @0,
+                             @"Misc Modifier" : @0 } mutableCopy];
     }
     
     return self;

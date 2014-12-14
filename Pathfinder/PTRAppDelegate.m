@@ -8,6 +8,7 @@
 
 #import "PTRAppDelegate.h"
 #import "PTRStatsTableViewController.h"
+#import "PTRCharacterStore.h"
 
 @implementation PTRAppDelegate
 
@@ -20,7 +21,7 @@
     //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"StatsView" bundle:nil];
     //UIViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"StatsViewController"];
     
-    UITableViewController *svc = [[PTRStatsTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    UITableViewController *svc = [[PTRStatsTableViewController alloc] initWithStyle:UITableViewStylePlain  character:[[PTRCharacterStore sharedStore] createItem]];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:svc];
     
     self.window.rootViewController = navController;
