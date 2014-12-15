@@ -52,22 +52,19 @@
             
         //Initialize Saving Throws
         
-        self.fortitude = [@{@"Total" : @0,
-                            @"Base Save" : @0,
+        self.fortitude = [@{@"Base Save" : @0,
                             @"Ability Modifier" : @0,
                             @"Magic Modifier" : @0,
                             @"Misc Modifier" : @0,
                             @"Temp Modifier" : @0 } mutableCopy];
             
-        self.reflex = [@{@"Total" : @0,
-                         @"Base Save" : @0,
+        self.reflex = [@{@"Base Save" : @0,
                          @"Ability Modifier" : @0,
                          @"Magic Modifier" : @0,
                          @"Misc Modifier" : @0,
                          @"Temp Modifier" : @0 } mutableCopy];
             
-        self.will = [@{@"Total" : @0,
-                       @"Base Save" : @0,
+        self.will = [@{@"Base Save" : @0,
                        @"Ability Modifier" : @0,
                        @"Magic Modifier" : @0,
                        @"Misc Modifier" : @0,

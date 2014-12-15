@@ -30,23 +30,29 @@
         
         self.cellTitle.text = title;
         self.cellValue.text = [value stringValue];
-        UIView *componentsView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, components.count * 30.0 + (components.count - 1) * 20.0, 43.0)];
+        UIView *componentsView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1000, 43.0)];
         self.components = [components mutableCopy];
         
         int entryNumber = 0;
+        int widthTotal = 0;
         
         for (NSString *key in self.components)
         {
             NSNumber *currentComponent = [self.components objectForKey:key];
-            UILabel *componentLabel = [[UILabel alloc] initWithFrame:CGRectMake(entryNumber * 50.0, 0.0, 43.0, 17.0)];
-            UITextField *componentTextField = [[UITextField alloc] initWithFrame:CGRectMake(entryNumber * 50.0, 13.0, 30.0, 30.0)];
+            UILabel *componentLabel = [[UILabel alloc] initWithFrame:CGRectMake(widthTotal + entryNumber * 10, 0.0, 0.0, 0.0)];
+            [componentLabel setFont:[UIFont systemFontOfSize:11]];
+            componentLabel.text = key;
+            [componentLabel sizeToFit];
+            UITextField *componentTextField = [[UITextField alloc] initWithFrame:CGRectMake((componentLabel.frame.size.width / 2) - 15 + widthTotal + entryNumber * 10, 13.0, 30.0, 30.0)];
+            NSLog(@"%d", widthTotal);
             UILabel *additionLabel;
+            widthTotal += componentLabel.frame.size.width;
             if (entryNumber < components.count - 1)
             {
-                additionLabel = [[UILabel alloc] initWithFrame:CGRectMake(entryNumber * 50.0 + 34, 21.0, 11.0, 11.0)];
+                additionLabel = [[UILabel alloc] initWithFrame:CGRectMake(widthTotal + entryNumber * 10, 21.0, 11.0, 11.0)];
                 additionLabel.text = @"+";
             }
-            componentLabel.text = key;
+            
             componentTextField.text = [currentComponent stringValue];
             
             componentLabel.adjustsFontSizeToFitWidth = NO;
@@ -57,7 +63,6 @@
             componentTextField.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
             componentTextField.borderStyle = UITextBorderStyleRoundedRect;
             
-            [componentLabel setFont:[UIFont systemFontOfSize:14]];
             [componentTextField setFont:[UIFont systemFontOfSize:14]];
             [additionLabel setFont:[UIFont systemFontOfSize:14]];
             
@@ -66,10 +71,10 @@
             [componentsView addSubview:componentTextField];
             [componentsView addSubview:additionLabel];
             
-            entryNumber = entryNumber + 1;
+            entryNumber++;
             
         }
-        self.scrollView.contentSize = CGSizeMake(self.contentView.frame.size.width, self.scrollView.frame.size.height);
+        self.scrollView.contentSize = CGSizeMake(componentsView.frame.size.width, self.scrollView.frame.size.height);
         [self.scrollView addSubview:componentsView];
     }
     return self;
