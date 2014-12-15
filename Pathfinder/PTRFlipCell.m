@@ -30,7 +30,7 @@
         
         self.cellTitle.text = title;
         self.cellValue.text = [value stringValue];
-        UIView *componentsView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1000, 43.0)];
+        UIView *componentsView = [[UIView alloc] init];
         self.components = [components mutableCopy];
         
         int entryNumber = 0;
@@ -71,9 +71,11 @@
             [componentsView addSubview:componentTextField];
             [componentsView addSubview:additionLabel];
             
+            
             entryNumber++;
             
         }
+        [componentsView setFrame:CGRectMake(0.0, 0.0, widthTotal + entryNumber * 10, 43)];
         self.scrollView.contentSize = CGSizeMake(componentsView.frame.size.width, self.scrollView.frame.size.height);
         [self.scrollView addSubview:componentsView];
     }
