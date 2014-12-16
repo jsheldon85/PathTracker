@@ -7,20 +7,23 @@
 //
 
 #import "PTRFlipCell.h"
+#import "PTRStatsTableViewController.h"
 
 @interface PTRFlipCell()
 
 @property (strong, nonatomic) IBOutlet UIView *frontView;
 @property (strong, nonatomic) IBOutlet UIView *backView;
 @property (nonatomic) NSMutableDictionary *components;
+@property (weak) PTRStatsTableViewController *tableViewController;
 
 @end
 
 @implementation PTRFlipCell
 
--(instancetype)initWithTitle:(NSString *)title value:(NSNumber *)value componentDictionary:(NSDictionary *)components
+-(instancetype)initWithTitle:(NSString *)title value:(NSNumber *)value componentDictionary:(NSDictionary *)components viewController:(PTRStatsTableViewController *)vc
 {
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PTRFlipCell"];
+    self.tableViewController = vc;
     
     if(self)
     {
@@ -39,28 +42,34 @@
         for (NSString *key in self.components)
         {
             NSNumber *currentComponent = [self.components objectForKey:key];
-            UILabel *componentLabel = [[UILabel alloc] initWithFrame:CGRectMake(widthTotal + entryNumber * 10, 0.0, 0.0, 0.0)];
+            
+            UILabel *componentLabel = [[UILabel alloc] initWithFrame:CGRectMake(widthTotal + entryNumber * 10.0, 0.0, 0.0, 0.0)];
             [componentLabel setFont:[UIFont systemFontOfSize:11]];
             componentLabel.text = key;
             [componentLabel sizeToFit];
+            componentLabel.tag = entryNumber * 2 + 1;   //Label will have the tag of the corresponding text field + 1
+            
             UITextField *componentTextField = [[UITextField alloc] initWithFrame:CGRectMake((componentLabel.frame.size.width / 2) - 15 + widthTotal + entryNumber * 10, 13.0, 30.0, 30.0)];
             NSLog(@"%d", widthTotal);
             UILabel *additionLabel;
+            
             widthTotal += componentLabel.frame.size.width;
+            
             if (entryNumber < components.count - 1)
             {
-                additionLabel = [[UILabel alloc] initWithFrame:CGRectMake(widthTotal + entryNumber * 10, 21.0, 11.0, 11.0)];
+                additionLabel = [[UILabel alloc] initWithFrame:CGRectMake(widthTotal + entryNumber * 10.0, 21.0, 11.0, 11.0)];
                 additionLabel.text = @"+";
             }
             
             componentTextField.text = [currentComponent stringValue];
+            componentTextField.delegate = self;
+            componentTextField.tag = entryNumber * 2;
             
             componentLabel.adjustsFontSizeToFitWidth = NO;
             componentTextField.adjustsFontSizeToFitWidth = NO;
             additionLabel.adjustsFontSizeToFitWidth = NO;
             
             componentTextField.textAlignment = NSTextAlignmentCenter;
-            componentTextField.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
             componentTextField.borderStyle = UITextBorderStyleRoundedRect;
             
             [componentTextField setFont:[UIFont systemFontOfSize:14]];
@@ -98,7 +107,7 @@
     // Initialization code
 }
 
-//These cells should not be selected or highlighted
+//These cells should not be selected or highlighted--------------
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
@@ -110,5 +119,14 @@
     return;
 }
 
+//--------------------------------------------------------------
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    
+    
+    
+    return YES;
+}
 
 @end

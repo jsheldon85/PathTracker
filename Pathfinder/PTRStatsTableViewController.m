@@ -77,10 +77,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PTRFlipCell"];
     if(cell == nil)
     {
-        cell = [[PTRFlipCell alloc] initWithTitle:[self.titleArray objectAtIndex:indexPath.row]  value:[self.valueArray objectAtIndex:indexPath.row] componentDictionary:[self.componentsArray objectAtIndex:indexPath.row]];
+        cell = [[PTRFlipCell alloc] initWithTitle:[self.titleArray objectAtIndex:indexPath.row]  value:[self.valueArray objectAtIndex:indexPath.row] componentDictionary:[self.componentsArray objectAtIndex:indexPath.row] viewController:self];
     }
     
     return cell;
 }
+
+
 
 @end

@@ -29,7 +29,7 @@
 
 - (instancetype)init {
     @throw [NSException exceptionWithName:@"Singleton"
-                                   reason:@"Use +[BNRItemStore sharedStore]"
+                                   reason:@"Use +[PTRCharacterStore sharedStore]"
                                  userInfo:nil];
     return nil;
 }
