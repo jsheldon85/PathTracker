@@ -11,6 +11,7 @@
 #import "PTRStatsTableViewController.h"
 #import "PTRCharacter.h"
 #import "PTRCharacterMenuTableViewController.h"
+#import "PTRBioViewController.h"
 
 @interface PTRCharactersTableViewController ()
 
@@ -23,6 +24,8 @@
     self = [super initWithStyle:style];
     if (self) {
         self.navigationItem.title = @"PathTracker";
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCharacter:)];
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(toggleEditingMode:)];
     }
     return self;
 }
@@ -70,53 +73,47 @@
     [self.navigationController pushViewController:[[PTRCharacterMenuTableViewController alloc] initWithStyle:UITableViewStylePlain character:character] animated:YES];
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)addCharacter:(id)sender
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    [[PTRCharacterStore sharedStore] createItem];
+    [self.navigationController pushViewController:[[PTRBioViewController alloc] initWithCharacter:[[[PTRCharacterStore sharedStore] allItems] lastObject]] animated:YES];
+    [self.tableView reloadData];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        NSArray *characters = [[PTRCharacterStore sharedStore] allItems];
+        PTRCharacter *character = characters[indexPath.row];
+        [[PTRCharacterStore sharedStore] removeItem:character];
+        
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+-(void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)toggleEditingMode:(UIBarButtonItem *)sender
 {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+    if(self.isEditing)
+    {
+        [sender setTitle:@"Edit"];
+        [self setEditing:NO animated:YES];
+    } else {
+        [sender setTitle:@"Done"];
+        [self setEditing:YES animated:YES];
+    }
 }
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [[PTRCharacterStore sharedStore] moveItemAtIndex:sourceIndexPath.row toIndex:destinationIndexPath.row];
 }
-*/
 
 @end

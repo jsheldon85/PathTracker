@@ -60,7 +60,7 @@
     if (self)
     {
         self.character = character;
-        self.scrollView.contentSize = self.bioView.frame.size;
+        self.navigationItem.title = [NSString stringWithFormat:@"%@: Bio", character.characterName];
     }
     
     return self;
@@ -93,6 +93,13 @@
     
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    self.scrollView.contentSize = self.bioView.frame.size;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -101,10 +108,33 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
+    return YES;
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    self.character.characterName = self.nameField.text;
+    self.character.aligment = self.alignmentField.text;
+    self.character.player = self.playerField.text;
+    self.character.characterClass = self.classField.text;
+    self.character.diety = self.dietyField.text;
+    self.character.homeland = self.homelandField.text;
+    self.character.race = self.raceField.text;
+    self.character.size = self.sizeField.text;
+    self.character.gender = self.genderField.text;
+    self.character.hair = self.hairField.text;
+    self.character.eyes = self.eyesField.text;
+    
+    self.character.characterLevel = [NSNumber numberWithInt:[self.levelField.text intValue]];
+    self.character.age = [NSNumber numberWithInt:[self.ageField.text intValue]];
+    self.character.height = [NSNumber numberWithInt:[self.heightField.text intValue]];
+    self.character.weight = [NSNumber numberWithInt:[self.weightField.text intValue]];
+    self.character.hp = [NSNumber numberWithInt:[self.HPField.text intValue]];
+    self.character.speed = [NSNumber numberWithInt:[self.speedField.text intValue]];
+    self.character.baseAttackBonus = [NSNumber numberWithInt:[self.BABField.text intValue]];
+    self.character.spellResistance = [NSNumber numberWithInt:[self.spellResistanceField.text intValue]];
     
     [[PTRCharacterStore sharedStore] saveChanges];
-    
-    return YES;
 }
 
 @end

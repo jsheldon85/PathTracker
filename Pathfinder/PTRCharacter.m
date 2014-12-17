@@ -17,6 +17,8 @@
     if(self)
     {
         
+        self.characterName = @"New Character";
+        
         //Initialize Abilities
         
 

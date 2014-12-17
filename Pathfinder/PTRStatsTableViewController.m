@@ -15,6 +15,8 @@
 @property NSMutableArray *titleArray;
 @property NSMutableArray *componentsArray;
 @property PTRCharacter *character;
+@property NSMutableArray *cells;
+@property IBOutlet UIBarButtonItem *buttonItem;
 
 
 @end
@@ -32,7 +34,7 @@
     if (self)
     {
         self.character = character;
-        self.navigationItem.title = character.characterName;
+        self.navigationItem.title = [NSString stringWithFormat:@"%@: Main Stats", character.characterName];
     }
     return self;
 }
@@ -77,9 +79,9 @@
         cell = [[PTRFlipCell alloc] initWithTitle:[self.titleArray objectAtIndex:indexPath.row] componentDictionary:[self.componentsArray objectAtIndex:indexPath.row] viewController:self];
     }
     
+    [self.cells addObject:cell];
     return cell;
 }
-
 
 
 @end
