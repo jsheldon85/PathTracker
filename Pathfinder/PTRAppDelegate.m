@@ -9,6 +9,7 @@
 #import "PTRAppDelegate.h"
 #import "PTRStatsTableViewController.h"
 #import "PTRCharacterStore.h"
+#import "PTRCharactersTableViewController.h"
 
 @implementation PTRAppDelegate
 
@@ -21,8 +22,8 @@
     //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"StatsView" bundle:nil];
     //UIViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"StatsViewController"];
     
-    UITableViewController *svc = [[PTRStatsTableViewController alloc] initWithStyle:UITableViewStylePlain  character:[[PTRCharacterStore sharedStore] createItem]];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:svc];
+    UITableViewController *cvc = [[PTRCharactersTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:cvc];
     
     self.window.rootViewController = navController;
     self.window.backgroundColor = [UIColor whiteColor];
@@ -38,8 +39,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [[PTRCharacterStore sharedStore] saveChanges];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

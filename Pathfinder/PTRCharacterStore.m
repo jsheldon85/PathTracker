@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Mark Johnson. All rights reserved.
 //
 
+#
 #import "PTRCharacterStore.h"
 #import "PTRCharacter.h"
 
@@ -80,7 +81,14 @@
 -(BOOL)saveChanges
 {
     NSString *path = [self itemArchivePath];
-    return [NSKeyedArchiver archiveRootObject:self.privateItems toFile:path];
+    BOOL success = [NSKeyedArchiver archiveRootObject:self.privateItems toFile:path];
+    if (success)
+    {
+        NSLog(@"Saved!");
+    } else {
+        NSLog(@"Nope");
+    }
+    return success;
 }
 
 @end

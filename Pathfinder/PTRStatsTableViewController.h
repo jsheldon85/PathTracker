@@ -11,6 +11,6 @@
 
 @interface PTRStatsTableViewController : UITableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style character:(PTRCharacter *)character;
+- (instancetype)initWithStyle:(UITableViewStyle)style character:(PTRCharacter *)character;
 
 @end

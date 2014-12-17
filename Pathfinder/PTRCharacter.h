@@ -27,14 +27,14 @@
 @property (nonatomic) NSMutableArray *languages;
 @property (nonatomic) NSMutableArray *inventory;
 
-@property (nonatomic) int characterLevel;
-@property (nonatomic) int age;
-@property (nonatomic) int height;
-@property (nonatomic) int weight;
-@property (nonatomic) int hp;
-@property (nonatomic) int speed;
-@property (nonatomic) int baseAttackBonus;
-@property (nonatomic) int spellResistance;
+@property (nonatomic) NSNumber *characterLevel;
+@property (nonatomic) NSNumber *age;
+@property (nonatomic) NSNumber *height;
+@property (nonatomic) NSNumber *weight;
+@property (nonatomic) NSNumber *hp;
+@property (nonatomic) NSNumber *speed;
+@property (nonatomic) NSNumber *baseAttackBonus;
+@property (nonatomic) NSNumber *spellResistance;
 
 //---Stats made up from two or more numbers---
 

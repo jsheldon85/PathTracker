@@ -29,6 +29,11 @@
 		3FB2B2A21A23CFEE00E15042 /* PTRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2B2A11A23CFEE00E15042 /* PTRItem.m */; };
 		3FB2B2A51A23D02C00E15042 /* PTRWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2B2A41A23D02C00E15042 /* PTRWeapon.m */; };
 		3FD1AECE1A26351D00B06E15 /* PZO1110-CharacterSheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3FD1AECD1A26351D00B06E15 /* PZO1110-CharacterSheet.pdf */; };
+		3FD2C5811A411C1000FAC589 /* PTRCharactersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2C5801A411C1000FAC589 /* PTRCharactersTableViewController.m */; };
+		3FD2C5831A41264300FAC589 /* AT257024L__12838.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FD2C5821A41264300FAC589 /* AT257024L__12838.jpg */; };
+		3FD2C5861A4134D000FAC589 /* PTRCharacterMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2C5851A4134D000FAC589 /* PTRCharacterMenuTableViewController.m */; };
+		3FD2C58D1A413AEF00FAC589 /* PTRBioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2C58B1A413AEF00FAC589 /* PTRBioViewController.m */; };
+		3FD2C58E1A413AEF00FAC589 /* PTRBioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD2C58C1A413AEF00FAC589 /* PTRBioViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +79,14 @@
 		3FB2B2A31A23D02C00E15042 /* PTRWeapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRWeapon.h; sourceTree = "<group>"; };
 		3FB2B2A41A23D02C00E15042 /* PTRWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRWeapon.m; sourceTree = "<group>"; };
 		3FD1AECD1A26351D00B06E15 /* PZO1110-CharacterSheet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "PZO1110-CharacterSheet.pdf"; sourceTree = "<group>"; };
+		3FD2C57F1A411C1000FAC589 /* PTRCharactersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRCharactersTableViewController.h; sourceTree = "<group>"; };
+		3FD2C5801A411C1000FAC589 /* PTRCharactersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRCharactersTableViewController.m; sourceTree = "<group>"; };
+		3FD2C5821A41264300FAC589 /* AT257024L__12838.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AT257024L__12838.jpg; sourceTree = "<group>"; };
+		3FD2C5841A4134D000FAC589 /* PTRCharacterMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRCharacterMenuTableViewController.h; sourceTree = "<group>"; };
+		3FD2C5851A4134D000FAC589 /* PTRCharacterMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRCharacterMenuTableViewController.m; sourceTree = "<group>"; };
+		3FD2C58A1A413AEF00FAC589 /* PTRBioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRBioViewController.h; sourceTree = "<group>"; };
+		3FD2C58B1A413AEF00FAC589 /* PTRBioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRBioViewController.m; sourceTree = "<group>"; };
+		3FD2C58C1A413AEF00FAC589 /* PTRBioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTRBioViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +162,13 @@
 				3FB2B2A41A23D02C00E15042 /* PTRWeapon.m */,
 				3F612BEA1A2FAEF40018ECC6 /* PTRStatsTableViewController.h */,
 				3F612BEB1A2FAEF40018ECC6 /* PTRStatsTableViewController.m */,
+				3FD2C5841A4134D000FAC589 /* PTRCharacterMenuTableViewController.h */,
+				3FD2C5851A4134D000FAC589 /* PTRCharacterMenuTableViewController.m */,
+				3FD2C57F1A411C1000FAC589 /* PTRCharactersTableViewController.h */,
+				3FD2C5801A411C1000FAC589 /* PTRCharactersTableViewController.m */,
+				3FD2C58A1A413AEF00FAC589 /* PTRBioViewController.h */,
+				3FD2C58B1A413AEF00FAC589 /* PTRBioViewController.m */,
+				3FD2C58C1A413AEF00FAC589 /* PTRBioViewController.xib */,
 				3F7C03B11A159338008852F3 /* Images.xcassets */,
 				3F7C03A61A159338008852F3 /* Supporting Files */,
 				3F7C03DA1A169FAE008852F3 /* Images */,
@@ -189,6 +209,7 @@
 		3F7C03DA1A169FAE008852F3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3FD2C5821A41264300FAC589 /* AT257024L__12838.jpg */,
 				3F7C03DD1A16A44C008852F3 /* circle_arrow-back_previous-128.png */,
 				3F7C03DB1A169FC7008852F3 /* 1396911348_icon-ios7-information-outline.png */,
 			);
@@ -270,9 +291,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD2C58E1A413AEF00FAC589 /* PTRBioViewController.xib in Resources */,
 				3F7C03AA1A159338008852F3 /* InfoPlist.strings in Resources */,
 				3FD1AECE1A26351D00B06E15 /* PZO1110-CharacterSheet.pdf in Resources */,
 				3F7C03B21A159338008852F3 /* Images.xcassets in Resources */,
+				3FD2C5831A41264300FAC589 /* AT257024L__12838.jpg in Resources */,
 				3F7C03DE1A16A44C008852F3 /* circle_arrow-back_previous-128.png in Resources */,
 				3F7C03DC1A169FC7008852F3 /* 1396911348_icon-ios7-information-outline.png in Resources */,
 				3F7C03E21A16BB72008852F3 /* PTRFlipCell.xib in Resources */,
@@ -294,6 +317,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD2C5811A411C1000FAC589 /* PTRCharactersTableViewController.m in Sources */,
+				3FD2C58D1A413AEF00FAC589 /* PTRBioViewController.m in Sources */,
+				3FD2C5861A4134D000FAC589 /* PTRCharacterMenuTableViewController.m in Sources */,
 				3FB2B29F1A23CED600E15042 /* PTRCharacter.m in Sources */,
 				3FB2B2A21A23CFEE00E15042 /* PTRItem.m in Sources */,
 				3F7C03AC1A159338008852F3 /* main.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "PTRFlipCell.h"
 #import "PTRStatsTableViewController.h"
+#import "PTRCharacterStore.h"
 
 @interface PTRFlipCell()
 
@@ -15,12 +16,15 @@
 @property (strong, nonatomic) IBOutlet UIView *backView;
 @property (nonatomic) NSMutableDictionary *components;
 @property (weak) PTRStatsTableViewController *tableViewController;
+@property (weak, nonatomic) IBOutlet UITextField *totalField;
+
+@property NSNumber *total;
 
 @end
 
 @implementation PTRFlipCell
 
--(instancetype)initWithTitle:(NSString *)title value:(NSNumber *)value componentDictionary:(NSDictionary *)components viewController:(PTRStatsTableViewController *)vc
+-(instancetype)initWithTitle:(NSString *)title componentDictionary:(NSMutableDictionary *)components viewController:(PTRStatsTableViewController *)vc
 {
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PTRFlipCell"];
     self.tableViewController = vc;
@@ -32,9 +36,12 @@
         [self.contentView addSubview:nibViews[1]];
         
         self.cellTitle.text = title;
-        self.cellValue.text = [value stringValue];
+
         UIView *componentsView = [[UIView alloc] init];
-        self.components = [components mutableCopy];
+        self.components = components;
+        
+        self.total = [self dictionarySum:self.components];
+        self.cellValue.text = [self.total stringValue];
         
         int entryNumber = 0;
         int widthTotal = 0;
@@ -94,17 +101,19 @@
 
 - (IBAction)flipToBack:(id)sender
 {
+    self.totalField.text = [self.total stringValue];
     [UIView transitionWithView:self.contentView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromBottom animations:^{[self.contentView insertSubview:self.backView aboveSubview:self.frontView];} completion:^(BOOL finished){}];
 }
 
 - (IBAction)flipToFront:(id)sender
 {
+    self.cellValue.text = [self.total stringValue];
     [UIView transitionWithView:self.contentView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromBottom animations:^{[self.contentView insertSubview:self.frontView aboveSubview:self.backView];} completion:^(BOOL finished){}];
 }
 
 - (void)awakeFromNib
 {
-    // Initialization code
+    self.totalField.text = [self.total stringValue];
 }
 
 //These cells should not be selected or highlighted--------------
@@ -123,10 +132,24 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
-    
-    
-    
+    int labelTag = textField.tag + 1;
+    UILabel *label = [self.scrollView viewWithTag:labelTag];
+    [self.components setObject:[NSNumber numberWithInt:[textField.text intValue]] forKey:label.text];
+    [[PTRCharacterStore sharedStore] saveChanges];
+    self.total = [self dictionarySum:self.components];
+    self.totalField.text = [self.total stringValue];
     return YES;
+}
+
+-(NSNumber *)dictionarySum:(NSMutableDictionary *)dictionary
+{
+    int sum = 0;
+    for (NSString *key in self.components)
+    {
+        NSNumber *currentComponent = [self.components objectForKey:key];
+        sum = sum + [currentComponent intValue];
+    }
+    return [NSNumber numberWithInt:sum];
 }
 
 @end

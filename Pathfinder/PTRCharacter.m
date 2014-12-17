@@ -121,14 +121,14 @@
         _languages = [aDecoder decodeObjectForKey:@"languages"];
         _inventory = [aDecoder decodeObjectForKey:@"inventory"];
         
-        _characterLevel = [aDecoder decodeIntForKey:@"characterLevel"];
-        _age = [aDecoder decodeIntForKey:@"age"];
-        _height = [aDecoder decodeIntForKey:@"height"];
-        _weight = [aDecoder decodeIntForKey:@"weight"];
-        _hp = [aDecoder decodeIntForKey:@"hp"];
-        _speed = [aDecoder decodeIntForKey:@"speed"];
-        _baseAttackBonus = [aDecoder decodeIntForKey:@"baseAttackBonus"];
-        _spellResistance = [aDecoder decodeIntForKey:@"spellResistance"];
+        _characterLevel = [aDecoder decodeObjectForKey:@"characterLevel"];
+        _age = [aDecoder decodeObjectForKey:@"age"];
+        _height = [aDecoder decodeObjectForKey:@"height"];
+        _weight = [aDecoder decodeObjectForKey:@"weight"];
+        _hp = [aDecoder decodeObjectForKey:@"hp"];
+        _speed = [aDecoder decodeObjectForKey:@"speed"];
+        _baseAttackBonus = [aDecoder decodeObjectForKey:@"baseAttackBonus"];
+        _spellResistance = [aDecoder decodeObjectForKey:@"spellResistance"];
         
         _strength = [aDecoder decodeObjectForKey:@"strength"];
         _dexterity = [aDecoder decodeObjectForKey:@"dexterity"];
@@ -166,14 +166,14 @@
     [aCoder encodeObject:self.languages forKey:@"languages"];
     [aCoder encodeObject:self.inventory forKey:@"inventory"];
     
-    [aCoder encodeInt:self.characterLevel forKey:@"characterLevel"];
-    [aCoder encodeInt:self.age forKey:@"age"];
-    [aCoder encodeInt:self.height forKey:@"height"];
-    [aCoder encodeInt:self.weight forKey:@"weight"];
-    [aCoder encodeInt:self.hp forKey:@"hp"];
-    [aCoder encodeInt:self.speed forKey:@"speed"];
-    [aCoder encodeInt:self.baseAttackBonus forKey:@"baseAttackBonus"];
-    [aCoder encodeInt:self.spellResistance forKey:@"spellResistance"];
+    [aCoder encodeObject:self.characterLevel forKey:@"characterLevel"];
+    [aCoder encodeObject:self.age forKey:@"age"];
+    [aCoder encodeObject:self.height forKey:@"height"];
+    [aCoder encodeObject:self.weight forKey:@"weight"];
+    [aCoder encodeObject:self.hp forKey:@"hp"];
+    [aCoder encodeObject:self.speed forKey:@"speed"];
+    [aCoder encodeObject:self.baseAttackBonus forKey:@"baseAttackBonus"];
+    [aCoder encodeObject:self.spellResistance forKey:@"spellResistance"];
     
     [aCoder encodeObject:self.strength forKey:@"strength"];
     [aCoder encodeObject:self.dexterity forKey:@"dexterity"];

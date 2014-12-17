@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *cellValue;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
--(instancetype)initWithTitle:(NSString *)title value:(NSNumber *)value componentDictionary:(NSDictionary *)components viewController:(PTRStatsTableViewController *)vc;
+-(instancetype)initWithTitle:(NSString *)title componentDictionary:(NSMutableDictionary *)components viewController:(PTRStatsTableViewController *)vc;
 
 
 @end

@@ -13,7 +13,6 @@
 @interface PTRStatsTableViewController ()
 
 @property NSMutableArray *titleArray;
-@property NSMutableArray *valueArray;
 @property NSMutableArray *componentsArray;
 @property PTRCharacter *character;
 
@@ -27,14 +26,13 @@
     return [self initWithStyle:UITableViewStylePlain character:nil];
 }
 
-- (id)initWithStyle:(UITableViewStyle)style character:(PTRCharacter *)character
+- (instancetype)initWithStyle:(UITableViewStyle)style character:(PTRCharacter *)character
 {
     self = [super initWithStyle:style];
     if (self)
     {
         self.character = character;
-
-        self.navigationItem.title = @"PathTracker";
+        self.navigationItem.title = character.characterName;
     }
     return self;
 }
@@ -44,7 +42,6 @@
     [super viewDidLoad];
     
     self.titleArray = [[NSMutableArray alloc] initWithObjects:@"Dexterity", @"Strength", @"Intelligence", @"Constitution", nil];
-    self.valueArray = [[NSMutableArray alloc] initWithObjects:@13,@10,@17,@14,nil];
     self.componentsArray = [[NSMutableArray alloc] initWithObjects:self.character.fortitude, self.character.strength, self.character.intelligence, self.character.constitution, nil];
     
     [self.tableView reloadData];
@@ -77,7 +74,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PTRFlipCell"];
     if(cell == nil)
     {
-        cell = [[PTRFlipCell alloc] initWithTitle:[self.titleArray objectAtIndex:indexPath.row]  value:[self.valueArray objectAtIndex:indexPath.row] componentDictionary:[self.componentsArray objectAtIndex:indexPath.row] viewController:self];
+        cell = [[PTRFlipCell alloc] initWithTitle:[self.titleArray objectAtIndex:indexPath.row] componentDictionary:[self.componentsArray objectAtIndex:indexPath.row] viewController:self];
     }
     
     return cell;
